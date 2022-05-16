@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CR ia-z : réunion du 12/03/2022 &#8212; IA-Z</title>
+    <title>Régularisation &amp; tradeoff biais-variance : une introduction &#8212; IA-Z</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Régularisation d’un modèle" href="6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html" />
+    <link rel="prev" title="Généralisation d’un modèle de Machine Learning" href="4%20-%20Generalisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,29 +103,44 @@ const thebe_selector_output = ".output, .cell_output"
   Apprentissage automatique
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/1%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
+  <a class="reference internal" href="1%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
    Pourquoi le Machine Learning ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/2%20-%20Elements%20de%20definition.html">
+  <a class="reference internal" href="2%20-%20Elements%20de%20definition.html">
    Eléments de définition
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/3%20-%20Regression%20lineaire.html">
+  <a class="reference internal" href="3%20-%20Regression%20lineaire.html">
    Modèle élémentaire : La régression linéaire
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/4%20-%20Generalisation.html">
+  <a class="reference internal" href="4%20-%20Generalisation.html">
    Généralisation d’un modèle de Machine Learning
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Régularisation &amp; tradeoff biais-variance : une introduction
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20Feature%20engineering%20%26%20cleaning.html">
+  <a class="reference internal" href="6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
+   Régularisation d’un modèle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7%20-%20Tradeoff%20biais-variance.html">
+   Compromis biais-variance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8%20-%20Feature%20engineering%20%26%20cleaning.html">
    Feature Engineering
   </a>
  </li>
@@ -135,8 +152,23 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../NLP/README.html">
-   Qu’est-ce que le traitement du langage naturel (a.k.a NLP) ?
+  <a class="reference internal" href="../NLP/1_Introduction.html">
+   Chapitre I: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NLP/2_DonneesTextuelles.html">
+   Etude des données textuelles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NLP/3_embeddings.html">
+   Embeddings : comment les machines comprennent les mots ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NLP/4_bert.html">
+   BERT - Bidirectional Encoder Representations from Transformers
   </a>
  </li>
 </ul>
@@ -189,6 +221,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hors-série
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20annexes/mener_une_recherche.html">
+   Mener une recherche internet efficacement
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -229,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/CRs/12032022_CR.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/Cours fondamentaux ML/5 - Régularisation & tradeoff biais-variance - une introduction.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -249,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ia-z/ia-z/issues/new?title=Issue%20on%20page%20%2Fdocs/CRs/12032022_CR.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ia-z/ia-z/issues/new?title=Issue%20on%20page%20%2Fdocs/Cours fondamentaux ML/5 - Régularisation & tradeoff biais-variance - une introduction.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -276,18 +320,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectif-du-cours-apres-discussion">
-   Objectif du cours après discussion :
+  <a class="reference internal nav-link" href="#compromis-biais-variance">
+   Compromis biais-variance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#repartition-des-taches">
-   Répartition des tâches
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#organisation-du-cours">
-   Organisation du cours
+  <a class="reference internal nav-link" href="#regularisation">
+   Régularisation
   </a>
  </li>
 </ul>
@@ -300,7 +339,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CR ia-z : réunion du 12/03/2022</h1>
+                <h1>Régularisation & tradeoff biais-variance : une introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -311,18 +350,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectif-du-cours-apres-discussion">
-   Objectif du cours après discussion :
+  <a class="reference internal nav-link" href="#compromis-biais-variance">
+   Compromis biais-variance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#repartition-des-taches">
-   Répartition des tâches
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#organisation-du-cours">
-   Organisation du cours
+  <a class="reference internal nav-link" href="#regularisation">
+   Régularisation
   </a>
  </li>
 </ul>
@@ -334,79 +368,44 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="cr-ia-z-reunion-du-12-03-2022">
-<h1>CR ia-z : réunion du 12/03/2022<a class="headerlink" href="#cr-ia-z-reunion-du-12-03-2022" title="Permalink to this headline">¶</a></h1>
-<p>Personnes présentes - core team : Bsh, Pierrot, Adrien</p>
-<p>Nouveaux entrants dans le projet : Chaminou, Zinzolin (Welcome les potes !)</p>
-<p>Rédigé par : Bsh</p>
-<div class="section" id="objectif-du-cours-apres-discussion">
-<h2>Objectif du cours après discussion :<a class="headerlink" href="#objectif-du-cours-apres-discussion" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Avoir un site web français avec des bonnes ressources en IA. On s’est concentré sur du ML pour le moment. L’idée est qu’une personne qui cherche des infos en IA en français, il tombera sur le notre site. Une base en ML avec la possibilité de spécialiser (IA symbolique, CV, NLP, RL, Cloud, Big Data ..).</p></li>
-<li><p>Reprendre les sites comme open classroom, qui nous ont tous permi d’apprendre en autodidacte. Avoir une version similaire pour notre usecase en mode projet communautaire.</p></li>
-<li><p>Les pré-requis du cours : une personne qui sort de terminale scientifique (niveau bac) avec une base en maths suffisante (spé maths). L’idée est de réussir à donner une intuition sur les notions que l’on souhaite aborder et on s’autorise pour certains chapitre d’approfondir certains points pour ceux qui le souhaitent.</p></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="regularisation-tradeoff-biais-variance-une-introduction">
+<h1>Régularisation &amp; tradeoff biais-variance : une introduction<a class="headerlink" href="#regularisation-tradeoff-biais-variance-une-introduction" title="Permalink to this headline">¶</a></h1>
+<p>On a pu voir dans dans le chapitre précédent que le but d’un modèle de ML est de bien généraliser.
+Dans un court exemple de régression polynômiale, on a vu qu’il y était possible d’améliorer
+les performances du modèle en augmentant le degré de notre polynôme, mais qu’il fallait être précautionneux
+pour éviter le sur-apprentissage.</p>
+<p>Ce comportement n’est pas spécifique à la régression polynômiale. Ce phénomène apparaît partout en ML,
+à tel point qu’on lui a donné un nom : <strong>le compromis biais-variance</strong>.
+Ce compromis (<em>tradeoff</em> en anglais) se modélise par une équation décrivant les trois sources d’erreurs possibles
+par tout modèle de ML : le biais, la variance et le bruit.</p>
+<p>La régularisation est un moyen de réduire l’erreur de généralisation d’un modèle en limitant explicitement
+sa capacité à apprendre. C’est une des méthodes les plus utilisées en ML lorsque l’on fait face à du sur-apprentissage.</p>
+<p>Dans ce chapitre, nous allons voir rapidement ce qu’est le compromis biais-variance et la régularisation, afin d’en avoir
+une intuition. Les deux prochains chapitres aborderont ces deux concepts plus profondemment.</p>
+<div class="section" id="compromis-biais-variance">
+<h2>Compromis biais-variance<a class="headerlink" href="#compromis-biais-variance" title="Permalink to this headline">¶</a></h2>
+<p>Comme nous l’avons vu, un modèle doit être entraîné de sorte à ne pas tomber dans le sous-apprentissage ni le sur-apprentissage.
+<em>Mathématiquement, on peut décrire le sous-apprentissage comme un phénomène étant causé par un modèle trop biaisé.
+De la même façon, il est possible de définir la source d’un sur-apprentissage d’un modèle par sa variance.</em></p>
+<p>Mais alors, qu’entends-t-on par <em>biais</em> et <em>variance</em> d’un modèle ?</p>
+<p>Pour faire simple, les biais d’un modèle réunissent l’ensemble des contraintes qui définissent l’ensemble des modélisations que peuvent
+exprimer notre modèle. Par exemple, un modèle linéaire ne peut modéliser que des fonctions affines entre ses entrées et sa sortie,
+ce qui en fait un modèle très biaisé.</p>
+<p>La variance elle peut se visualiser par la sensibilité d’un modèle face aux données d’entraînement. Un modèle avec une haute variance
+sera très sensible à un changement dans ses données d’entraînement. Il va donc plus facilement sur-apprendre, car une grosse variance
+est en général synonyme d’une grosse capacité d’adaptation aux données. Un <em>K-NN</em> est sensible aux données car ces dernières définissent
+directement la façon dont il va faire ses prédictions. A l’inverse, un modèle linéaire prends en compte l’ensemble des données
+pour trouver la courbe qui passe le mieux à travers celles-ci.</p>
 </div>
-<div class="section" id="repartition-des-taches">
-<h2>Répartition des tâches<a class="headerlink" href="#repartition-des-taches" title="Permalink to this headline">¶</a></h2>
-<p>Chaminou bossera sur :</p>
-<ul class="simple">
-<li><p>introduction générale du cours (l’article qui devait être fait initialement par Defend Intelligence) : IA c’est quoi ? Mal défini, avoir de meilleures explications et une meilleure approche historique/philosophique. Data Science ≠ Machine ≠ IA.</p></li>
-<li><p>Aspects symbolique de l’IA. Remettre l’IA symbolique à sa juste valeur.</p></li>
-<li><p>Ouvert aux discussions et aux reviews de cours</p></li>
-</ul>
-<p>Zinzolin bossera sur  :</p>
-<ul class="simple">
-<li><p>RL &amp; Deep Learning (notamment CV).</p></li>
-<li><p>CV : Application aux véhicules autonomes.</p></li>
-<li><p>RL : Un parallèle avec bandit manchot.</p></li>
-<li><p>Ouvert aux discussions, aux reviews de cours et sur les aspects organisationels du cours.</p></li>
-</ul>
-<p>Pierrot bossera sur :</p>
-<ul class="simple">
-<li><p>Les cours fondamentaux en Machine Learning</p></li>
-</ul>
-<p>Adrien bossera sur :</p>
-<ul class="simple">
-<li><p>La partie Big Data, Data Engineering</p></li>
-</ul>
-<p>Bsh bossera sur :</p>
-<ul class="simple">
-<li><p>La partie organisation du cours (formaliser bonnes pratiques du github, onboarding, framework d’écriture de cours ..).</p></li>
-</ul>
-</div>
-<div class="section" id="organisation-du-cours">
-<h2>Organisation du cours<a class="headerlink" href="#organisation-du-cours" title="Permalink to this headline">¶</a></h2>
-<p>Concernant la partie organisation du cours, plusieurs points pertinents ont étaient abordés :</p>
-<ul class="simple">
-<li><p>Idée de Zinzolin concernant les bonnes pratiques pour l’édition des chapitres : Faciliter le travail des rédacteurs, l’idée est de développer un framework/template de cours. Faire gagner du temps à ceux qui doivent rédiger des cours, ça permet que tous les cours soient uniformes. Insister sur les bonnes pratiques de rédactions (template, titres, formats images, police …).</p></li>
-<li><p>Avoir un responsable par chapitre.</p></li>
-<li><p>A l’issu de chaque réunion :</p>
-<ul>
-<li><p>Faire un fichier pour écrire les objectifs de chacun pour la prochaine réunion (cours terme) - 1 sprint. L’idée est que si l’on écrit les objectifs de chaque personne pour une réunion donnée, les personnes concernées s’engagent à respecter leurs obligations.</p></li>
-<li><p>Faire un fichier pour résumer ce qui a été dit lors de chaque CR</p></li>
-</ul>
-</li>
-<li><p>Avoir une roadmap “long terme” afin de définir des objectifs précis et réalisable à atteindre.</p></li>
-<li><p>Avoir un dossier d’onboarding pour simplifier l’arrivée de nouvelles personnes dans le projet (points importants à connaitre, les bonnes pratiques du projet et notamment du github, quels sont les différents rôles possibles, comment s’y retrouver..)</p></li>
-<li><p>Tout ça sera formaliser sur le github  :</p>
-<ul>
-<li><p>Avoir un folder CR pour mettre l’ensemble des CR du projet.</p></li>
-<li><p>Avoir un template d’écriture pour les rédacteurs.</p></li>
-<li><p>Avoir un dossier d’onboarding pour les nouveaux venus.</p></li>
-<li><p>Avoir un dossier TODO pour historiser les objectifs de chacuns lors de chaque sprint.</p>
-<ul>
-<li><p>A partir de ce TODO ‘mensuel’, les personnes concernées devront faire des issues pour chaque cours en expliquant plus ou moins en détails ce qu’ils/elles souhaitent faire puis créer une branche à partir des issues pour avoir un PR liée.</p></li>
-<li><p>Système de sous-branche (idée de Zinzolin) : une branche par chapitre (la responsabilité de la branche revient au team manager du chapitre) et les personnes souhaitant faire des modifications les feraient sur un chapitre et donc feraient des MR sur la branche en question plutôt que sur main directement. Lorsqu’on fait une MR, on merge sur chapitre et non sur main lorsque c’est reviewé. Quand le chapitre est terminée et reviewé, on merge sur la branche main.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Remarque annexe énoncée par Pierrot :</p>
-<ul class="simple">
-<li><p>Ne pas se véxer lorsqu’on fait des remarques ou des modifications sur son cours. Mettez votre égo de côté ! Chill.</p></li>
-</ul>
+<div class="section" id="regularisation">
+<h2>Régularisation<a class="headerlink" href="#regularisation" title="Permalink to this headline">¶</a></h2>
+<p>La régularisation est une méthode pour limiter le sur-apprentissage d’un modèle.
+Le principe est d’empêcher un modèle à apprendre des relations trop complexes entre les features <code class="docutils literal notranslate"><span class="pre">X</span></code> et l’objectif <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>En fait, il est possible de voir la régularisation comme une façon d’ajouter un biais à notre modèle, afin de réduire sa variance.
+Ce biais indique au modèle que nous préférons trouver des solutions simples, en partant de l’hypothèse que
+<a class="reference external" href="https://fr.wikipedia.org/wiki/Rasoir_d%27Ockham">ces solutions simples sont généralement les meilleures</a>.</p>
+<p>La régularisation prends souvent la forme d’une pénalité ajoutée à la fonction de perte d’entraînement du modèle.
+Cette pénalité modélise la complexité du modèle (que le modèle cherche donc à minimiser).</p>
 </div>
 </div>
 
@@ -423,7 +422,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/CRs"
+            path: "./docs/Cours fondamentaux ML"
         },
         predefinedOutput: true
     }
@@ -434,7 +433,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="4%20-%20Generalisation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Généralisation d’un modèle de Machine Learning</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Régularisation d’un modèle</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

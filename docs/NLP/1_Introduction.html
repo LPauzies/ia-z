@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CR ia-z : réunion du 13/03/2022 &#8212; IA-Z</title>
+    <title>Chapitre I: Introduction &#8212; IA-Z</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Etude des données textuelles" href="2_DonneesTextuelles.html" />
+    <link rel="prev" title="Feature Engineering" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +125,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20Feature%20engineering%20%26%20cleaning.html">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/5%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
+   Régularisation &amp; tradeoff biais-variance : une introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
+   Régularisation d’un modèle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/7%20-%20Tradeoff%20biais-variance.html">
+   Compromis biais-variance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html">
    Feature Engineering
   </a>
  </li>
@@ -133,10 +150,25 @@ const thebe_selector_output = ".output, .cell_output"
   Traitement automatique de la langue
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapitre I: Introduction
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NLP/README.html">
-   Qu’est-ce que le traitement du langage naturel (a.k.a NLP) ?
+  <a class="reference internal" href="2_DonneesTextuelles.html">
+   Etude des données textuelles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_embeddings.html">
+   Embeddings : comment les machines comprennent les mots ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_bert.html">
+   BERT - Bidirectional Encoder Representations from Transformers
   </a>
  </li>
 </ul>
@@ -189,6 +221,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hors-série
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20annexes/mener_une_recherche.html">
+   Mener une recherche internet efficacement
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -229,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/CRs/13032022_CR.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/NLP/1_Introduction.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -249,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ia-z/ia-z/issues/new?title=Issue%20on%20page%20%2Fdocs/CRs/13032022_CR.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ia-z/ia-z/issues/new?title=Issue%20on%20page%20%2Fdocs/NLP/1_Introduction.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -276,34 +320,26 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resume">
-   Résumé
+  <a class="reference internal nav-link" href="#presentation-du-nlp">
+   Présentation du NLP
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#presentation-rapide-des-nouvelles-personnes">
-   Présentation rapide des nouvelles personnes
+  <a class="reference internal nav-link" href="#plan-du-cours">
+   Plan du cours
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#idees-en-vrac-discutees">
-   Idées en vrac discutées
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decoupage-des-notions-de-ml-envisageable">
-   Découpage des notions de ML envisageable
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decoupage-des-taches-organisationelles">
-   Découpage des tâches organisationelles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequis">
+     Prérequis:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plan">
+     Plan:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -315,7 +351,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CR ia-z : réunion du 13/03/2022</h1>
+                <h1>Chapitre I: Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -326,34 +362,26 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resume">
-   Résumé
+  <a class="reference internal nav-link" href="#presentation-du-nlp">
+   Présentation du NLP
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#presentation-rapide-des-nouvelles-personnes">
-   Présentation rapide des nouvelles personnes
+  <a class="reference internal nav-link" href="#plan-du-cours">
+   Plan du cours
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#idees-en-vrac-discutees">
-   Idées en vrac discutées
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decoupage-des-notions-de-ml-envisageable">
-   Découpage des notions de ML envisageable
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decoupage-des-taches-organisationelles">
-   Découpage des tâches organisationelles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequis">
+     Prérequis:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plan">
+     Plan:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -364,109 +392,58 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="cr-ia-z-reunion-du-13-03-2022">
-<h1>CR ia-z : réunion du 13/03/2022<a class="headerlink" href="#cr-ia-z-reunion-du-13-03-2022" title="Permalink to this headline">¶</a></h1>
-<p>Personnes présentes : Bsh, Adrien (au début), Zinzolin (à la fin), Studio, Pierrot
-Ainsi que de nouveaux arrivants et arrivantes: Serena, PhPMan, Etienne (Yooooo !)</p>
-<p>Rédigé par : Pierre</p>
-<div class="section" id="resume">
-<h2>Résumé<a class="headerlink" href="#resume" title="Permalink to this headline">¶</a></h2>
-<p>On a trois nouvelles personnes qui rejoingnent le projet et ça c’est super cool !</p>
-<p>L’urgence semble être l’organisation générale du projet et la définition plus précise de l’objectif du projet.
-Les challenges :</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="chapitre-i-introduction">
+<h1>Chapitre I: Introduction<a class="headerlink" href="#chapitre-i-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="presentation-du-nlp">
+<h2>Présentation du NLP<a class="headerlink" href="#presentation-du-nlp" title="Permalink to this headline">¶</a></h2>
+<p>Le Natural Language Processing, ou Traitement du Language Naturel, est une branche de l’intelligence artificielle se concentrant sur les données textuelles et linguistiques dans le but de rendre des machines capable de “comprendre” le contenu de documents et les nuances du language.</p>
+<p>Cela a permis l’émergence de nouvelles technologies tel que les:</p>
 <ul class="simple">
-<li><p>C’est quoi le but final du projet <strong>exactement</strong> ? Quels seront ses limites ? Serena a notamment soulevé un point intéressant : qu’est-ce qui nous différencie fondamentalement
-de ce qui se fait déjà sur internet ?</p></li>
-<li><p>Comment faire pour faciliter l’onboarding des nouveaux arrivants (les nouveaux arrivants ont pu s’en rendre compte) ?</p></li>
-<li><p>Unifier l’ensemble des cours afin qu’ils aient le même format global, et qu’il y ait le moins de redite possible.</p></li>
-<li><p>Comment s’organiser de manière générale pour un projet communautaire ? A 5-6 ça allait, mais maintenant il faut une réelle structure
-pour rapidement savoir qui fait quoi et pour quand.</p></li>
+<li><p>Traducteurs automatique: Pour convertir du texte d’une langue à une autre.</p></li>
+<li><p>Générateurs de texte: Pour compléter automatiquement des phrases lors de la rédaction d’un email ou de SMS.</p></li>
+<li><p>Moteurs de recherche: Pour obtenir les résultats les plus pertinents en fonction de mots clés.</p></li>
+<li><p>Assistants vocaux: Afin de donner des commandes vocales et contrôler ses appareils domestiques.</p></li>
 </ul>
-<p>Il me semble que ces questions devraient être répondues (ou les réponses au moins validées) par l’ensemble des membres du projet (encore un problème organisationel !
-comment on décide tous ensemble ?)</p>
+<p>Aujourd’hui banalisées, ces technologies relevaient du rêve il y a quelques décennies de cela, c’est grâce à l’essor des réseaux de neurone et des meilleures performances des machines que nous sommes capable d’établir des modèles suffisament fin pour saisir les nuances du language.</p>
+<p>Le Natural Language Processing est cependant toujours un important sujet d’actualité et continue d’être étudié.</p>
 </div>
-<div class="section" id="presentation-rapide-des-nouvelles-personnes">
-<h2>Présentation rapide des nouvelles personnes<a class="headerlink" href="#presentation-rapide-des-nouvelles-personnes" title="Permalink to this headline">¶</a></h2>
-<p>Serena :</p>
+<div class="section" id="plan-du-cours">
+<h2>Plan du cours<a class="headerlink" href="#plan-du-cours" title="Permalink to this headline">¶</a></h2>
+<p>Afin de pouvoir suivre ce cours au mieux il est recommandé d’avoir des connaissances dans les prérequis listés ci-dessous.</p>
+<div class="section" id="prerequis">
+<h3>Prérequis:<a class="headerlink" href="#prerequis" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>L3 maths</p></li>
-<li><p>Intéressée par la rédaction des cours CV</p></li>
-<li><p>A suivie des MOOCS de ML auparavant</p></li>
+<li><p>Language Python</p></li>
+<li><p>Librairies Numpy et Pandas</p></li>
+<li><p>Algèbre linéaire, probabilités et statistiques</p></li>
+<li><p>Fondamentaux du Machine learning (Descente de gradient, Clustering, Régularisation…)</p></li>
 </ul>
-<p>PhPMan :</p>
-<ul class="simple">
-<li><p>Ecole d’ingé puis thèse (sujet de thèse : regression à partir de time series pour l’environnement)</p></li>
-<li><p>R&amp;D dans la continuité de sa thèse</p></li>
-<li><p>Intéressé par la rédaction de manière générale</p></li>
-</ul>
-<p>Etienne :</p>
-<ul class="simple">
-<li><p>M1 maths</p></li>
-<li><p>Connaissances surtout sur les maths appliquées (stats, PCA, ML fonda/classique surtout)</p></li>
-<li><p>Intéressé par la rédaction cours ML fonda</p></li>
-</ul>
-<p>Dans l’immédiat, Serena va contacter Tao pour voir quoi faire en CV.
-Etienne et moi allons voir pour la rédaction ML fonda.
-PhPMan va baliser le terrain pour les time series.</p>
+<p>Le cours se décomposera en trois chapitres, chaque chapitre possèdera une partie de mise en pratique des connaissances acquises:</p>
 </div>
-<div class="section" id="idees-en-vrac-discutees">
-<h2>Idées en vrac discutées<a class="headerlink" href="#idees-en-vrac-discutees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plan">
+<h3>Plan:<a class="headerlink" href="#plan" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Définir les pré-requis de chaque cours</p></li>
-<li><p>Définir ce que l’on entends exactement par cours / chapitre</p></li>
-<li><p>Relax sur le syndrome de l’imposteur, on apprends aussi en rédigeant et en relisant ce que font les autres</p></li>
-<li><p>Travailler qu’avec Github ? Utiliser d’autres outilts (à la Trello, Notion, etc…) ?</p></li>
-<li><p>Idéalement on sera 10+ à la prochaine réu mensuelle, va falloir s’organiser pour pas que ça soit le bordel (ordre du jour…)</p></li>
-<li><p>Une méga mindmap pour relier l’ensemble des cours ?</p></li>
+<li><p>Chapitre I: Introduction</p>
+<ul>
+<li><p><a class="reference external" href="#pr%C3%A9sentation-du-nlp">Présentation du NLP</a></p></li>
+<li><p><a class="reference internal" href="2_DonneesTextuelles.html"><span class="doc std std-doc">Etude des données textuelles</span></a></p></li>
+</ul>
+</li>
+<li><p>Chapitre II: Notions générales</p>
+<ul>
+<li><p>Modélisation statistique du language</p></li>
+<li><p>Modèles de langues</p></li>
+<li><p>Embeddings</p></li>
+</ul>
+</li>
+<li><p>Chapitre III:</p>
+<ul>
+<li><p>Les réseaux de neurones récurrents</p></li>
+<li><p>Pipelines NLP</p></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="section" id="decoupage-des-notions-de-ml-envisageable">
-<h2>Découpage des notions de ML envisageable<a class="headerlink" href="#decoupage-des-notions-de-ml-envisageable" title="Permalink to this headline">¶</a></h2>
-<p><em>Fondamentaux</em></p>
-<ul class="simple">
-<li><p>Intro/ Cours pour comprendre la philosophie du truc (notions données, modèles, résultat, métrique, entraînement, etc) on définit tous les termes de data science</p></li>
-<li><p>Algos de ML supervisé classiques / Algos de ML non-supervisé classiques</p></li>
-<li><p>Cours de DL classique (Perceptron, backpropagation etc)</p></li>
-<li><p>Cours des différentes archi de DL classiques : Basique/ RNN/ CNN/ Encodeur Décodeur etc.</p></li>
-</ul>
-<p><em>Applications</em></p>
-<ul class="simple">
-<li><p>Computer Vision</p></li>
-<li><p>NLP</p></li>
-<li><p>Time Series</p></li>
-<li><p>Audio</p></li>
-<li><p>RL</p></li>
-<li><p>Tiny ML</p></li>
-</ul>
-<p><em>Problématiques</em></p>
-<ul class="simple">
-<li><p>Peu de données</p></li>
-<li><p>Déséquilibre des classes</p></li>
-<li><p>Données Synthétiques vs réelles</p></li>
-</ul>
-<p><em>Autre</em></p>
-<ul class="simple">
-<li><p>Neuroscience</p></li>
-<li><p>Ethique</p></li>
-<li><p>Aspect écologique/énergétique</p></li>
-<li><p>Hardware pour l’IA</p></li>
-</ul>
-</div>
-<div class="section" id="decoupage-des-taches-organisationelles">
-<h2>Découpage des tâches organisationelles<a class="headerlink" href="#decoupage-des-taches-organisationelles" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Répartition des tâches</p></li>
-<li><p>Git workflow</p></li>
-<li><p>Plan des chapitres</p></li>
-<li><p>Formalisme d’écriture</p></li>
-<li><p>Onboarding (document expliquant les 4 points ci-dessus)</p></li>
-</ul>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>En deux réunions on s’est rendu compte à quel point notre orga est fragile.
-Je crois que ça va être pour tout le monde l’occasion de voir ce que c’est que la création d’un projet communautaire !</p>
-<p>Si vous ne savez pas quoi écouter en ce moment, allez voir du côté de Tastycool !</p>
 </div>
 </div>
 
@@ -483,7 +460,7 @@ Je crois que ça va être pour tout le monde l’occasion de voir ce que c’est
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/CRs"
+            path: "./docs/NLP"
         },
         predefinedOutput: true
     }
@@ -494,7 +471,21 @@ Je crois que ça va être pour tout le monde l’occasion de voir ce que c’est
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Feature Engineering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_DonneesTextuelles.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Etude des données textuelles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
