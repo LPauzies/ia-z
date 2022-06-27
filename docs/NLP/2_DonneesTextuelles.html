@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Embeddings : comment les machines comprennent les mots ?" href="3_embeddings.html" />
+    <link rel="next" title="Chapitre II: Notions générales" href="3_ModStatLanguage.html" />
     <link rel="prev" title="Chapitre I: Introduction" href="1_Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -104,45 +105,52 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/1%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/01%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
    Pourquoi le Machine Learning ?
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/2%20-%20Elements%20de%20definition.html">
-   Eléments de définition
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/3%20-%20Regression%20lineaire.html">
-   Modèle élémentaire : La régression linéaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/4%20-%20Generalisation.html">
-   Généralisation d’un modèle de Machine Learning
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/5%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
-   Régularisation &amp; tradeoff biais-variance : une introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
-   Régularisation d’un modèle
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/7%20-%20Tradeoff%20biais-variance.html">
-   Compromis biais-variance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html">
-   Feature Engineering
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/02%20-%20Elements%20de%20definition.html">
+     Eléments de définition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/03%20-%20Regression%20lineaire.html">
+     Introduction à la régression : la régression linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/05%20-%20Generalisation.html">
+     Généralisation d’un modèle de Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/06%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
+     Régularisation &amp; tradeoff biais-variance : une introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/07%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
+     Régularisation d’un modèle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/08%20-%20Compromis%20biais-variance.html">
+     Compromis biais-variance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/11%20-%20Feature%20engineering%20%26%20cleaning.html">
+     Feature Engineering
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -162,12 +170,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3_embeddings.html">
-   Embeddings : comment les machines comprennent les mots ?
+  <a class="reference internal" href="3_ModStatLanguage.html">
+   Chapitre II: Notions générales
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_bert.html">
+  <a class="reference internal" href="4_ModLangues.html">
+   Modèles de langues
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Embedings.html">
+   Embeddings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_bert.html">
    BERT - Bidirectional Encoder Representations from Transformers
   </a>
  </li>
@@ -216,8 +234,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20RL/intro.html">
-   Reinforcement learning
+  <a class="reference internal" href="../Cours%20RL/1%20-%20Introduction.html">
+   Introduction au Reinforcement learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20RL/3%20-%20Processus%20de%20d%C3%A9cision%20markoviens.html">
+   Processus de décision markoviens (MDPs)
   </a>
  </li>
 </ul>
@@ -492,8 +515,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="differences-avec-les-donnees-structurees">
 <h2>Différences avec les données structurées<a class="headerlink" href="#differences-avec-les-donnees-structurees" title="Permalink to this headline">¶</a></h2>
 <p>Tout d’abord nous devons nous intéresser au type de donnée que nous manipulerons tout au long de ce cours, à savoir du texte.</p>
-<p>De ce texte découle des mots, des phrases, des langues et des contextes difficilement quantifiable d’un point de vue mathématique, car contrairement aux chiffres le texte n’a pas de relation d’ordre ou d’axiome permettant de le manipuler facilement, or le but d’une donnée structurée est d’avoir une information claire permettant son interprétation et son traitement par des machines.</p>
-<p>Cependant le texte suit des régles, qu’elles soient grammaticales ou syntaxiques qui vont nous permettre de le transformer en une donnée structurée par la suite.</p>
+<p>De ce texte découle des mots, des phrases, des langues et des contextes difficilement quantifiables d’un point de vue mathématique, car contrairement aux chiffres le texte n’a pas de relation d’ordre ou d’axiome permettant de le manipuler facilement, or le but d’une donnée structurée est d’avoir une information claire permettant son interprétation et son traitement par des machines.</p>
+<p>Cependant le texte suit des règles, qu’elles soient grammaticales ou syntaxiques qui vont nous permettre de le transformer en une donnée structurée par la suite.</p>
 <p>Prenons par exemple la construction d’une phrase:</p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/65224852/166940035-1d1ed107-06ca-490e-85ed-b95c46b78865.jpg" width=600 height=302>
@@ -506,7 +529,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="pre-traitements">
 <h2>Pré-traitements<a class="headerlink" href="#pre-traitements" title="Permalink to this headline">¶</a></h2>
-<p>Nous étudierons quelques-uns des pré-traitements les plus courant en NLP:</p>
+<p>Nous étudierons quelques-uns des pré-traitements les plus courants en NLP:</p>
 <p><em>(Il est à noter que certains algorithmes ne fonctionnent qu’en anglais)</em></p>
 <div class="section" id="stemming">
 <h3>Stemming:<a class="headerlink" href="#stemming" title="Permalink to this headline">¶</a></h3>
@@ -548,7 +571,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="regularisation-des-expressions">
 <h3>Régularisation des expressions:<a class="headerlink" href="#regularisation-des-expressions" title="Permalink to this headline">¶</a></h3>
-<p>Ce procédé consiste à supprimer ou remplacer par un espace tous les caractéres ne comportant pas d’information comme les paranthéses, crochets, ou encore slash…</p>
+<p>Ce procédé consiste à supprimer ou remplacer par un espace tous les caractéres ne comportant pas d’information comme les parenthéses, crochets, ou encore slash…</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemple</span><span class="p">:</span> <span class="s2">&quot;Ceci est_une phrase, (très intéressante).&quot;</span> <span class="o">-&gt;</span> <span class="s2">&quot;Ceci est une phrase très intéressante&quot;</span>
 </pre></div>
 </div>
@@ -560,7 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="tokenisation">
 <h3>Tokenisation:<a class="headerlink" href="#tokenisation" title="Permalink to this headline">¶</a></h3>
-<p>La Tokenisation est un procédé de segmentation des phrases ou mots d’un corpus en petites unités, des <em>tokens</em>.</p>
+<p>La Tokenisation est un procédé de segmentation du texte d’un corpus en petites unités, des <em>tokens</em>.</p>
 <p>On peut voir les mots comme des tokens des phrases, ou encore les phrases comme des tokens d’un corpus.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemple</span><span class="p">:</span> <span class="s2">&quot;Ceci est une phrase très intéressante&quot;</span> <span class="o">-&gt;</span> <span class="o">|</span> <span class="n">Ceci</span> <span class="o">|</span> <span class="n">est</span> <span class="o">|</span> <span class="n">une</span> <span class="o">|</span> <span class="n">phrase</span> <span class="o">|</span> <span class="n">très</span> <span class="o">|</span> <span class="n">intéressante</span> <span class="o">|</span>
 </pre></div>
@@ -569,10 +592,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="exemple-de-pre-traitement">
 <h2>Exemple de pré-traitement<a class="headerlink" href="#exemple-de-pre-traitement" title="Permalink to this headline">¶</a></h2>
-<p>Pour pouvoir traiter des phrases en Python nous auront besoin de plusieurs librairies:</p>
+<p>Pour pouvoir traiter des phrases en Python nous aurons besoin de plusieurs librairies:</p>
 <ul class="simple">
 <li><p>re ou Regular Expressions est une librairie native de Python permettant d’utiliser des caractères spéciaux sans contexte comme ‘(‘ qui serait mal interprété.</p></li>
-<li><p>unidecode est une librairie native de Python permettant de décoder un code <em>unicode</em> qui est attribué par Python à chaque caractére, cela est important lorsque l’on travaille avec plusieurs langues différentes comme l’anglais, le français, le russe ou encore l’hébreux.</p></li>
+<li><p>unidecode est une librairie native de Python permettant de décoder un code <em>unicode</em> qui est attribué par Python à chaque caractère, cela est important lorsque l’on travaille avec plusieurs langues différentes comme l’anglais, le français, le russe ou encore l’hébreux.</p></li>
 <li><p>nltk ou Natural Language Toolkit est une librairie qui procure un ensemble d’outils tel que des Stemmers ou de la Lemmatisation.</p></li>
 </ul>
 <p>Pour installer nltk il suffit d’entrer la commande:</p>
@@ -581,9 +604,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Le code suivant permet de convertir des phrases en un format plus compréhensible pour un modèle de machine learning donné.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">unidecode</span>
 <span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">unidecode</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
 <span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">SnowballStemmer</span>
+
+<span class="c1">#nltk.download(&#39;wordnet&#39;)</span>
 
 <span class="k">def</span> <span class="nf">text_processing</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39; Return cleaned text for Machine Learning &#39;&#39;&#39;</span>
@@ -598,13 +625,12 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">text</span> <span class="o">=</span> <span class="n">NEW_LINE</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">REPLACE_BY_SPACE_RE</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">BAD_SYMBOLS_RE</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">STEMMER</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STOPWORDS</span><span class="p">])</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">STEMMER</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STOPWORDS</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">text</span>
     
 <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Je mangerais bien-une poire_aprés mon repas de ce midi.</span><span class="se">\n</span><span class="s2">&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text_processing</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
-<span class="n">tmp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Program paused...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Et on obtient:</p>
@@ -649,10 +675,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Chapitre I: Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3_embeddings.html" title="next page">
+    <a class='right-next' id="next-link" href="3_ModStatLanguage.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Embeddings : comment les machines comprennent les mots ?</p>
+        <p class="prev-next-title">Chapitre II: Notions générales</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

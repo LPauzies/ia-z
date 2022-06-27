@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Reinforcement learning" href="../Cours%20RL/intro.html" />
+    <link rel="prev" title="Processus de décision markoviens (MDPs)" href="../Cours%20RL/3%20-%20Processus%20de%20d%C3%A9cision%20markoviens.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,45 +104,52 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/1%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/01%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
    Pourquoi le Machine Learning ?
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/2%20-%20Elements%20de%20definition.html">
-   Eléments de définition
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/3%20-%20Regression%20lineaire.html">
-   Modèle élémentaire : La régression linéaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/4%20-%20Generalisation.html">
-   Généralisation d’un modèle de Machine Learning
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/5%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
-   Régularisation &amp; tradeoff biais-variance : une introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
-   Régularisation d’un modèle
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/7%20-%20Tradeoff%20biais-variance.html">
-   Compromis biais-variance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html">
-   Feature Engineering
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/02%20-%20Elements%20de%20definition.html">
+     Eléments de définition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/03%20-%20Regression%20lineaire.html">
+     Introduction à la régression : la régression linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/05%20-%20Generalisation.html">
+     Généralisation d’un modèle de Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/06%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
+     Régularisation &amp; tradeoff biais-variance : une introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/07%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
+     Régularisation d’un modèle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/08%20-%20Compromis%20biais-variance.html">
+     Compromis biais-variance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/11%20-%20Feature%20engineering%20%26%20cleaning.html">
+     Feature Engineering
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -161,12 +169,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NLP/3_embeddings.html">
-   Embeddings : comment les machines comprennent les mots ?
+  <a class="reference internal" href="../NLP/3_ModStatLanguage.html">
+   Chapitre II: Notions générales
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NLP/4_bert.html">
+  <a class="reference internal" href="../NLP/4_ModLangues.html">
+   Modèles de langues
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NLP/5_Embedings.html">
+   Embeddings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NLP/7_bert.html">
    BERT - Bidirectional Encoder Representations from Transformers
   </a>
  </li>
@@ -215,8 +233,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20RL/intro.html">
-   Reinforcement learning
+  <a class="reference internal" href="../Cours%20RL/1%20-%20Introduction.html">
+   Introduction au Reinforcement learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20RL/3%20-%20Processus%20de%20d%C3%A9cision%20markoviens.html">
+   Processus de décision markoviens (MDPs)
   </a>
  </li>
 </ul>
@@ -831,11 +854,11 @@ L’idée n’est pas de devenir un expert dans un domaine mais de balayer large
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../Cours%20RL/intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Cours%20RL/3%20-%20Processus%20de%20d%C3%A9cision%20markoviens.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reinforcement learning</p>
+            <p class="prev-next-title">Processus de décision markoviens (MDPs)</p>
         </div>
     </a>
 </div>

@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -54,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Etude des données textuelles" href="2_DonneesTextuelles.html" />
-    <link rel="prev" title="Feature Engineering" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html" />
+    <link rel="prev" title="Feature Engineering" href="../Cours%20fondamentaux%20ML/module_1_introduction/11%20-%20Feature%20engineering%20%26%20cleaning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,45 +105,52 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/1%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/01%20-%20Pourquoi%20le%20ML%20%26%20information%20gr%C3%A2ce%20%C3%A0%20la%20data.html">
    Pourquoi le Machine Learning ?
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/2%20-%20Elements%20de%20definition.html">
-   Eléments de définition
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/3%20-%20Regression%20lineaire.html">
-   Modèle élémentaire : La régression linéaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/4%20-%20Generalisation.html">
-   Généralisation d’un modèle de Machine Learning
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/5%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
-   Régularisation &amp; tradeoff biais-variance : une introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/6%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
-   Régularisation d’un modèle
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/7%20-%20Tradeoff%20biais-variance.html">
-   Compromis biais-variance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html">
-   Feature Engineering
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/02%20-%20Elements%20de%20definition.html">
+     Eléments de définition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/03%20-%20Regression%20lineaire.html">
+     Introduction à la régression : la régression linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/05%20-%20Generalisation.html">
+     Généralisation d’un modèle de Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/06%20-%20R%C3%A9gularisation%20%26%20tradeoff%20biais-variance%20-%20une%20introduction.html">
+     Régularisation &amp; tradeoff biais-variance : une introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/07%20-%20R%C3%A9gularisation%20d%27un%20mod%C3%A8le.html">
+     Régularisation d’un modèle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/08%20-%20Compromis%20biais-variance.html">
+     Compromis biais-variance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cours%20fondamentaux%20ML/module_1_introduction/11%20-%20Feature%20engineering%20%26%20cleaning.html">
+     Feature Engineering
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -162,12 +170,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3_embeddings.html">
-   Embeddings : comment les machines comprennent les mots ?
+  <a class="reference internal" href="3_ModStatLanguage.html">
+   Chapitre II: Notions générales
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_bert.html">
+  <a class="reference internal" href="4_ModLangues.html">
+   Modèles de langues
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Embedings.html">
+   Embeddings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_bert.html">
    BERT - Bidirectional Encoder Representations from Transformers
   </a>
  </li>
@@ -216,8 +234,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Cours%20RL/intro.html">
-   Reinforcement learning
+  <a class="reference internal" href="../Cours%20RL/1%20-%20Introduction.html">
+   Introduction au Reinforcement learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cours%20RL/3%20-%20Processus%20de%20d%C3%A9cision%20markoviens.html">
+   Processus de décision markoviens (MDPs)
   </a>
  </li>
 </ul>
@@ -396,16 +419,16 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Chapitre I: Introduction<a class="headerlink" href="#chapitre-i-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="presentation-du-nlp">
 <h2>Présentation du NLP<a class="headerlink" href="#presentation-du-nlp" title="Permalink to this headline">¶</a></h2>
-<p>Le Natural Language Processing, ou Traitement du Language Naturel, est une branche de l’intelligence artificielle se concentrant sur les données textuelles et linguistiques dans le but de rendre des machines capable de “comprendre” le contenu de documents et les nuances du language.</p>
-<p>Cela a permis l’émergence de nouvelles technologies tel que les:</p>
+<p>Le Natural Language Processing, ou Traitement du Langage Naturel, est une branche de l’intelligence artificielle se concentrant sur les données textuelles et linguistiques dans le but de rendre des machines capable de “comprendre” le contenu de documents et les nuances du langage.</p>
+<p>Cela a permis l’émergence de nouvelles technologies telles que les:</p>
 <ul class="simple">
-<li><p>Traducteurs automatique: Pour convertir du texte d’une langue à une autre.</p></li>
+<li><p>Traducteurs automatiques: Pour convertir du texte d’une langue à une autre.</p></li>
 <li><p>Générateurs de texte: Pour compléter automatiquement des phrases lors de la rédaction d’un email ou de SMS.</p></li>
 <li><p>Moteurs de recherche: Pour obtenir les résultats les plus pertinents en fonction de mots clés.</p></li>
 <li><p>Assistants vocaux: Afin de donner des commandes vocales et contrôler ses appareils domestiques.</p></li>
 </ul>
-<p>Aujourd’hui banalisées, ces technologies relevaient du rêve il y a quelques décennies de cela, c’est grâce à l’essor des réseaux de neurone et des meilleures performances des machines que nous sommes capable d’établir des modèles suffisament fin pour saisir les nuances du language.</p>
-<p>Le Natural Language Processing est cependant toujours un important sujet d’actualité et continue d’être étudié.</p>
+<p>Aujourd’hui banalisées, ces technologies relevaient du rêve il y a quelques décennies de cela, c’est grâce à l’essor des réseaux de neurones et des meilleures performances des machines que nous sommes capables d’établir des modèles suffisament fin pour saisir les nuances du langage.</p>
+<p>Le Natural Language Processing est cependant toujours un sujet d’actualité important et continue d’être étudié.</p>
 </div>
 <div class="section" id="plan-du-cours">
 <h2>Plan du cours<a class="headerlink" href="#plan-du-cours" title="Permalink to this headline">¶</a></h2>
@@ -413,7 +436,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="prerequis">
 <h3>Prérequis:<a class="headerlink" href="#prerequis" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Language Python</p></li>
+<li><p>Langage Python</p></li>
 <li><p>Librairies Numpy et Pandas</p></li>
 <li><p>Algèbre linéaire, probabilités et statistiques</p></li>
 <li><p>Fondamentaux du Machine learning (Descente de gradient, Clustering, Régularisation…)</p></li>
@@ -431,12 +454,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li><p>Chapitre II: Notions générales</p>
 <ul>
-<li><p>Modélisation statistique du language</p></li>
-<li><p>Modèles de langues</p></li>
-<li><p>Embeddings</p></li>
+<li><p><a class="reference internal" href="3_ModStatLanguage.html"><span class="doc std std-doc">Modélisation statistique du langage</span></a></p></li>
+<li><p><a class="reference internal" href="4_ModLangues.html"><span class="doc std std-doc">Modèles de langue</span></a></p></li>
+<li><p><a class="reference internal" href="5_Embedings.html"><span class="doc std std-doc">Embeddings</span></a></p></li>
 </ul>
 </li>
-<li><p>Chapitre III:</p>
+<li><p>Chapitre III: NLP &amp; Deep learning</p>
 <ul>
 <li><p>Les réseaux de neurones récurrents</p></li>
 <li><p>Pipelines NLP</p></li>
@@ -472,7 +495,7 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../Cours%20fondamentaux%20ML/8%20-%20Feature%20engineering%20%26%20cleaning.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Cours%20fondamentaux%20ML/module_1_introduction/11%20-%20Feature%20engineering%20%26%20cleaning.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
