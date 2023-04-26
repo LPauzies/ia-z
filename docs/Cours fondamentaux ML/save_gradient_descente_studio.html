@@ -934,31 +934,31 @@ On obtient le nuage de points suivant</p>
 <span class="g g-Whitespace">   </span><span class="mi">1329</span>     <span class="c1"># cast to a numpy array.</span>
 <span class="g g-Whitespace">   </span><span class="mi">1330</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1038,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1035</span>     <span class="n">key</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1036</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1038</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_with</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1033,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1030</span>     <span class="n">key</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1031</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1033</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_with</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1053,</span> in <span class="ni">Series._get_with</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="s2">&quot;Indexing a Series with DataFrame is not &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="s2">&quot;supported, use the appropriate DataFrame column&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1051</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1052</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1053</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values_tuple</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1055</span> <span class="k">elif</span> <span class="ow">not</span> <span class="n">is_list_like</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1056</span>     <span class="c1"># e.g. scalars that aren&#39;t recognized by lib.is_scalar, GH#32684</span>
-<span class="g g-Whitespace">   </span><span class="mi">1057</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1048,</span> in <span class="ni">Series._get_with</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>         <span class="s2">&quot;Indexing a Series with DataFrame is not &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1045</span>         <span class="s2">&quot;supported, use the appropriate DataFrame column&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1046</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1047</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1048</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values_tuple</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1050</span> <span class="k">elif</span> <span class="ow">not</span> <span class="n">is_list_like</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span>     <span class="c1"># e.g. scalars that aren&#39;t recognized by lib.is_scalar, GH#32684</span>
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1087,</span> in <span class="ni">Series._get_values_tuple</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1082</span> <span class="k">if</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1083</span>     <span class="c1"># mpl compat if we look up e.g. ser[:, np.newaxis];</span>
-<span class="g g-Whitespace">   </span><span class="mi">1084</span>     <span class="c1">#  see tests.series.timeseries.test_mpl_compat_hack</span>
-<span class="g g-Whitespace">   </span><span class="mi">1085</span>     <span class="c1"># the asarray is needed to avoid returning a 2D DatetimeArray</span>
-<span class="g g-Whitespace">   </span><span class="mi">1086</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-<span class="ne">-&gt; </span><span class="mi">1087</span>     <span class="n">disallow_ndim_indexing</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1088</span>     <span class="k">return</span> <span class="n">result</span>
-<span class="g g-Whitespace">   </span><span class="mi">1090</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/series.py:1082,</span> in <span class="ni">Series._get_values_tuple</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1077</span> <span class="k">if</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="c1"># mpl compat if we look up e.g. ser[:, np.newaxis];</span>
+<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="c1">#  see tests.series.timeseries.test_mpl_compat_hack</span>
+<span class="g g-Whitespace">   </span><span class="mi">1080</span>     <span class="c1"># the asarray is needed to avoid returning a 2D DatetimeArray</span>
+<span class="g g-Whitespace">   </span><span class="mi">1081</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="ne">-&gt; </span><span class="mi">1082</span>     <span class="n">disallow_ndim_indexing</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1083</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">1085</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/indexers/utils.py:343,</span> in <span class="ni">disallow_ndim_indexing</span><span class="nt">(result)</span>
 <span class="g g-Whitespace">    </span><span class="mi">335</span> <span class="sd">&quot;&quot;&quot;</span>
